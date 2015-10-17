@@ -1,0 +1,22 @@
+{
+  "name":        "lnc/skrz.cz",
+  "description": "library to generate skrz.cz xml feed",
+  "authors":     [
+    {
+      "name": "Jan Cinert"
+    }
+  ],
+  "autoload":    {
+    "psr-4": {
+      "LNC\\SkrzCZ\\": "src/"
+    }
+  },
+  "require":     {
+    "php": ">=5.3"
+  },
+  "authors":     [
+    {
+      "name":  "Jan Cinert"
+    }
+  ]
+}

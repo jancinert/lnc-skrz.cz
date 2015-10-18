@@ -217,8 +217,11 @@
                             $functionName,
                             3
                     )};
-            if( !is_array( $v ) ) {
+            if( !$v ) {
                 return array();
+            }
+            if( !is_array( $v ) ) {
+                $v = array( $v );
             }
 
             return $v;

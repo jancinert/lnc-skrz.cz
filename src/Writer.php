@@ -26,12 +26,16 @@
                  'ID',
                  $item->getId()
             );
-            foreach( $item->getCities() as $_iterItem ) {
+
+            $_cities = $item->getCities();
+            if( $_cities ) {
                 $writer->startElement( 'CITIES' );
-                $this->map(
-                     'CITY',
-                     $_iterItem
-                );
+                foreach( $_cities as $_iterItem ) {
+                    $this->map(
+                         'CITY',
+                         $_iterItem
+                    );
+                }
                 $writer->endElement();
             }
             $this->map(
@@ -46,12 +50,16 @@
                  'URL',
                  $item->getUrl()
             );
-            foreach( $item->getImages() as $_iterItem ) {
+
+            $_images = $item->getImages();
+            if( $_images ) {
                 $writer->startElement( 'IMAGES' );
-                $this->map(
-                     'IMAGE',
-                     $_iterItem
-                );
+                foreach( $_images as $_iterItem ) {
+                    $this->map(
+                         'IMAGE',
+                         $_iterItem
+                    );
+                }
                 $writer->endElement();
             }
             $this->map(
@@ -102,12 +110,16 @@
                  'CATEGORY',
                  $item->getCategory()
             );
-            foreach( $item->getTags() as $_iterItem ) {
+
+            $_tags = $item->getTags();
+            if( $_tags ) {
                 $writer->startElement( 'TAGS' );
-                $this->map(
-                     'TAG',
-                     $_iterItem
-                );
+                foreach( $item->getTags() as $_iterItem ) {
+                    $this->map(
+                         'TAG',
+                         $_iterItem
+                    );
+                }
                 $writer->endElement();
             }
 
